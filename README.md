@@ -37,20 +37,20 @@ NUMAR VARCHAR2(5)
 
 ## 4. Exemple cu operații de actualizare a datelor: INSERT, UPDATE, DELETE, MERGE
 ## --1. INSERAREA DATELOR IN TABELE:
-INSERT INTO AD_ADRESE VALUES(1, 'Bucuresti', 'Poiana Florilor', 12);
+- INSERT INTO AD_ADRESE VALUES(1, 'Bucuresti', 'Poiana Florilor', 12);
 
-INSERT INTO AD_ANGAJATI VALUES(10, 'Dumitriu', 'Ana Maria', '+40727274214', 'anadumitriu@gmail.com',
+- INSERT INTO AD_ANGAJATI VALUES(10, 'Dumitriu', 'Ana Maria', '+40727274214', 'anadumitriu@gmail.com',
 4200, 0.4, 10, 'Manager', null);
 
-INSERT INTO AD_TIP_ANTRENAMENTE VALUES(1, 'Cardio', 3);
+- INSERT INTO AD_TIP_ANTRENAMENTE VALUES(1, 'Cardio', 3);
 
-INSERT INTO AD_ABONAMENTE VALUES(21, 'C', 150, 1);
+- INSERT INTO AD_ABONAMENTE VALUES(21, 'C', 150, 1);
 
-INSERT INTO AD_CLIENTI VALUES(101, 'Catinca', 'Rebic', '+40733823566', TO_DATE('26-FEB-1997', 'DD-
+- INSERT INTO AD_CLIENTI VALUES(101, 'Catinca', 'Rebic', '+40733823566', TO_DATE('26-FEB-1997', 'DD-
 MON-YYYY'), 'catincarebic@gmail.com', TO_DATE('23-MAR-2020', 'DD-MON-YYYY'), 22, TO_DATE('23-
 APR-2020', 'DD-MON-YYYY'));
 
-INSERT INTO AD_SEDINTE VALUES(70, 'C7', 30, 11, 1, 102);
+- INSERT INTO AD_SEDINTE VALUES(70, 'C7', 30, 11, 1, 102);
 
 
 ## -- 2. Interogare 
