@@ -23,7 +23,6 @@ legăturilor dintre entităţi după modelul schemei de la seminar. Se poate rea
 orice instrument sau site (e.g., www.draw.io)
 ![image](https://github.com/dumitriu-ana/Proiect_Baze_de_Date_Sala/assets/72306782/4081e7c7-d58d-49ab-b9bd-5a6006b2f5a6)
 
-
 ## 3. Crearea tabelelor: CREATE (AD_ADRESE, AD_SEDII, AD_ANGAJATI, AD_TIP_ANTRENAMENTE, AD_ABONAMENTE, AD_CLIENTI, AD_SEDINTE).
 CREATE TABLE AD_ADRESE
 (
@@ -33,25 +32,17 @@ STRADA VARCHAR(50),
 NUMAR VARCHAR2(5)
 );
 
-
-
 ## 4. Exemple cu operații de actualizare a datelor: INSERT, UPDATE, DELETE, MERGE
 ## --1. INSERAREA DATELOR IN TABELE:
 - INSERT INTO AD_ADRESE VALUES(1, 'Bucuresti', 'Poiana Florilor', 12);
-
 - INSERT INTO AD_ANGAJATI VALUES(10, 'Dumitriu', 'Ana Maria', '+40727274214', 'anadumitriu@gmail.com',
 4200, 0.4, 10, 'Manager', null);
-
 - INSERT INTO AD_TIP_ANTRENAMENTE VALUES(1, 'Cardio', 3);
-
 - INSERT INTO AD_ABONAMENTE VALUES(21, 'C', 150, 1);
-
 - INSERT INTO AD_CLIENTI VALUES(101, 'Catinca', 'Rebic', '+40733823566', TO_DATE('26-FEB-1997', 'DD-
 MON-YYYY'), 'catincarebic@gmail.com', TO_DATE('23-MAR-2020', 'DD-MON-YYYY'), 22, TO_DATE('23-
 APR-2020', 'DD-MON-YYYY'));
-
 - INSERT INTO AD_SEDINTE VALUES(70, 'C7', 30, 11, 1, 102);
-
 
 ## -- 2. Interogare 
 SELECT ID_ANGAJAT, NUME, PRENUME, TELEFON, EMAIL, SALARIU, BONUS, ID_SEDIU, FUNCTIE,
@@ -61,7 +52,6 @@ WHERE LOWER(NUME)='dumitriu';
 
 ![image](https://github.com/dumitriu-ana/Proiect_Baze_de_Date_Sala/assets/72306782/b2cd8d94-02be-46c2-b1d5-2e23bece7dd9)
 
-
 ## -- 3. Sa se afiseze toti angajatii mai putin cel din functia de manager si cei din functia de contabil
 care au bonus intre 0.2 si 0.5
 SELECT ID_ANGAJAT, NUME, PRENUME, TELEFON, EMAIL, BONUS, FUNCTIE
@@ -69,7 +59,6 @@ FROM AD_ANGAJATI
 WHERE FUNCTIE NOT IN('Manager' , 'Contabil') AND (BONUS BETWEEN 0.2 AND 0.5);
 
 ![image](https://github.com/dumitriu-ana/Proiect_Baze_de_Date_Sala/assets/72306782/be917cc8-415d-4629-ae70-5fac7eebcda1)
-
 
 ## --4. Sa se afiseze sediile care au mai mult de 2 angajati si numarul de angajati aferent (JOIN)
 SELECT S.ID_SEDIU, S.DENUMIRE, S.CAPACITATE, COUNT(*) AS NUMAR_ANGAJATI
